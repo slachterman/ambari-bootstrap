@@ -13,4 +13,4 @@ echo "Uploading new hosts entries to append to all instances in stack"
 for host in $cluster; do scp hadoop_hosts centos@$host:; done
 
 echo "Appending new hosts entries with original for all instances in stack"
-pdsh -w centos@${stack}[0-$n].field.hortonworks.com "sudo cat /etc/hosts.orig hadoop_hosts >> /etc/hosts"
+pdsh -w centos@${stack}[0-$n].field.hortonworks.com "sudo cat /etc/hosts.orig hadoop_hosts > /etc/hosts"
