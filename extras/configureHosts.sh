@@ -1,3 +1,5 @@
+# call with name of stack as first parameter and number of nodes as second parameter
+
 stack=$1
 n=$(($2 - 1))
 
